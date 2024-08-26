@@ -6,6 +6,46 @@
   <title>To-Do-List app</title>
 </head>
 <body>
-  <h1>TO DO LIST</h1>
+  <div class="sidebar">
+    <h2 class="menu-title">Menu</h2>
+    <h3 class="tasks-title">TASKS</h3>
+    <ul class="tasks-list">
+      <li class="task-name">Upcoming</li>
+      <li class="task-name">Today</li>
+      <li class="task-name">Calendar</li>
+      <li class="task-name">Sticky Wall</li>
+    </ul>
+
+    <h3 class="list-title">LISTS</h3>
+    <ul class="list-list">
+      <li class="list-name">Personal</li>
+      <li class="list-name">Work</li>
+      <li class="list-name">List 1</li>
+      <li class="list-name">Add New List 1</li>
+    </ul>
+  </div>
+
+  <h3 class="tag-title">TAGS</h3>
+  <ul class="tags-list">
+    <li class="tag-name">Tag 1</li>
+    <li class="tag-name">Tag 2</li>
+    <li class="tag-name">Add New Tag</li>
+  </ul>
+
+  <div class="settings">
+    <p class="settings">Settings</p>
+    <p class="sign-out">Sign out</p>
+  </div>
+
+  <div class="main-content">
+    <header>
+      <h1>Today</h1>
+      <span>5</span>
+    </header>
+    <button class="task-btn" id="add-task-btn">Add New Task</button>
+    <ul class="task-list" id="task-list">
+      <!-- Tasks will be dynamically added here -->
+    </ul>
+  </div>
 </body>
 </html>
