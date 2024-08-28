@@ -6,46 +6,88 @@
   <title>To-Do-List app</title>
 </head>
 <body>
-  <div class="sidebar">
-    <h2 class="menu-title">Menu</h2>
-    <h3 class="tasks-title">TASKS</h3>
-    <ul class="tasks-list">
-      <li class="task-name">Upcoming</li>
-      <li class="task-name">Today</li>
-      <li class="task-name">Calendar</li>
-      <li class="task-name">Sticky Wall</li>
-    </ul>
+  <div class="container">
+    <div class="sidebar">
+      <h2 class="menu-title">Menu</h2>
+      <h3 class="tasks-title">TASKS</h3>
+      <ul class="tasks-list">
+        <li class="task-item">
+          <img src="./assets/images/upcoming.svg" alt="upcoming" class="tasks-list-icon">
+          <span class="task-name">Upcoming</span>
+        </li>
+        <li class="task-item">
+          <img src="./assets/images/today.svg" alt="today" class="tasks-list-icon">
+          <span class="task-name">Today</span>
+        </li>
+      </ul>
 
-    <h3 class="list-title">LISTS</h3>
-    <ul class="list-list">
-      <li class="list-name">Personal</li>
-      <li class="list-name">Work</li>
-      <li class="list-name">List 1</li>
-      <li class="list-name">Add New List 1</li>
-    </ul>
-  </div>
+      <h3 class="list-title">LISTS</h3>
+      <ul class="list-list">
+        <button id="new-list-btn">Create New List</button>
+        <li class="list-name">Personal</li>
+        <li class="list-name">Work</li>
+        <li class="list-name">List 1</li>
+      </ul>
 
-  <h3 class="tag-title">TAGS</h3>
-  <ul class="tags-list">
-    <li class="tag-name">Tag 1</li>
-    <li class="tag-name">Tag 2</li>
-    <li class="tag-name">Add New Tag</li>
-  </ul>
+    </div>
 
-  <div class="settings">
-    <p class="settings">Settings</p>
-    <p class="sign-out">Sign out</p>
-  </div>
+    <!-- Main Content -->
+    
+    <div class="main-content">
+      <h1>Todo List</h1>
 
-  <div class="main-content">
-    <header>
-      <h1>Today</h1>
-      <span>5</span>
-    </header>
-    <button class="task-btn" id="add-task-btn">Add New Task</button>
-    <ul class="task-list" id="task-list">
-      <!-- Tasks will be dynamically added here -->
-    </ul>
-  </div>
+      <h2>Projects</h2>
+      <ul id="project-list"></ul>
+
+      <form id="new-project-form">
+        <label for="new-project-name">New Project Name:</label>
+        <input type="text" id="new-project-name" required>
+        <button type="submit">Add Project</button>
+      </form>
+
+      <h2>Todos</h2>
+      <ul id="todo-list"></ul>
+
+      <form id="new-todo-form">
+        <label for="new-todo-title">Title:</label>
+        <input type="text" id="new-todo-title" placeholder="Title" required>
+
+        <label for="new-todo-description">Description:</label>
+        <input type="text" id="new-todo-description" placeholder="Description" required>
+
+        <label for="new-todo-due-date">Due Date:</label>
+        <input type="date" id="new-todo-due-date" required>
+
+        <label for="new-todo-priority">Priority:</label>
+        <select id="new-todo-priority" required>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+
+        <label for="new-todo-notes">Notes:</label>
+        <input type="text" id="new-todo-notes" placeholder="Notes">
+
+        <label for="new-todo-checklist">Checklist:</label>
+        <input type="text" id="new-todo-checklist" placeholder="Checklist (comma-separated)">
+
+        <label for="new-todo-type-of-task">Add to Task:</label>
+        <select id="new-todo-type-of-task" required>
+          <option value="upcoming">Upcoming</option>
+          <option value="today">Today</option>
+        </select>
+
+        <label for="new-todo-type-of-list">Add to List:</label>
+        <select id="new-todo-type-of-list" required>
+          <option value="personal">Personal</option>
+          <option value="work">Work</option>
+        </select>
+          
+        <button type="submit">Add Todo</button>
+        
+      </form>
+    </div>
+      
+  
 </body>
 </html>
