@@ -1,13 +1,10 @@
 import './assets/css/style.css';
 import './assets/css/normalized.css'
-import ProjectManager from './modules/project.js';
+import { createProject } from './modules/project.js';
+import { showNewProjectForm } from './modules/dom.js';
 
-console.log(ProjectManager.getProjects());
-console.log(ProjectManager.addProject("Work"));
-const todo = { title: 'Finish report', description: 'Complete the financial report by Friday' };
-ProjectManager.addTodoToProject('Work', todo);
-console.log(ProjectManager.getProject('Work'));
+const newProjectBtn = document.getElementById('new-project-btn')
 
-ProjectManager.deleteTodoFromProject('Work', 0);
-console.log(ProjectManager.getProjects('Work'));
-
+newProjectBtn.addEventListener('click', () => {
+  showNewProjectForm();
+});

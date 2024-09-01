@@ -5,101 +5,37 @@ body {
 }
 
 .container {
-  display: grid;
-  grid-template-columns: 1fr 4fr; /* Side bar takes 20% an main content takes 80%*/
+  background: rgb(0,139,50);
+  background: radial-gradient(circle, rgba(0,139,50,1) 0%, rgba(126,251,239,1) 84%);
   height: 100vh;
-}
-
-
-/* Sidebar styles */
-
-.sidebar {
-  background-color: #f4f4f4;
-  padding: 20px;
-}
-
-.menu-title {
-  margin-bottom: 20px;
-}
-
-.tasks-title {
-  margin-bottom: 15px;
-}
-
-.tasks-list {
-  list-style-type: none;
-  padding: 0;
-}
-.task-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-.tasks-list-icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-}
-
-/* Main Content styles */
-/* General container style */
-.main-content {
-  background-color: #ffff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 20px;
 }
 
-/* Styling for the forms */
+.title  {
+  margin: 50px 0 20px 0;
+  font-size: 1.8em;
+  color: whitesmoke;
+  font-weight: bold;
+}
 
-form {
-  width: 100%;
-  max-width: 500px;
-  background-color: #f9f9f9;
-  padding: 20px;
-  margin: 20px 0;
+#new-project-btn {
+  padding: 10px 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
-}
-
-/* Align form elments to center */
-
-form input,
-form select,
-form label,
-form button {
-  width: 100%;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-/* Styling the buttons */
-
-form button {
-  background-color: #007bff;
-  color: white;
-  font-weight: 600;
   border: none;
+  background-color: white;
+  color: rgb(231, 82, 2);
   cursor: pointer;
-  font-size: 16px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 1);
+  transition: background-color 0.3 ease;
+  font-weight: 600;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
-/* Add hover effecto to buttons */
-
-form button:hover {
-  background-color: #0056b3;
+#new-project-btn:hover {
+  background-color: rgb(231, 82, 2);
+  color: white;
 }
 
-/* Styling for the headers */
-h1, h2 {
-  text-align: center; 
-}
 
-#project-list,
-#todo-list {
-  margin: 20px 0;
-}
+
