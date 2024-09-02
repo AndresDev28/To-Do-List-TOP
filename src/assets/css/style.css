@@ -37,7 +37,63 @@ body {
   color: white;
 }
 
-#createProjectBtn {
-  background-color: black;
-  color: wheat;
+/* Create Project Form styles */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+form {
+  background-color: #fff;
+  padding: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+button[type="submit"], 
+.add-task-btn  {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: 600;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover,
+.add-task-btn:hover {
+  background-color: #3e8e41;
+}
+
+/* Project card styles */
+.project-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.project-title {
+  color: #3e8e41;
+  margin-bottom: 20px;
 }

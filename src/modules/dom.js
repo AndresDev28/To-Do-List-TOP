@@ -9,6 +9,7 @@ export function showNewProjectForm() {
   projectNameInput.type = 'text';
   projectNameInput.id = 'project-name';
   projectNameInput.placeholder = 'Project name...';
+  projectNameInput.required = true;
 
   newProjectForm.appendChild(projectNameInput);
 
@@ -38,10 +39,8 @@ export function showNewProjectForm() {
 
     // Add the project container to the DOM
     const project = document.getElementById('project');
+    project.style.display = 'block';
     project.appendChild(projectContainer);
-
-    // Toggle off start button after create the project
-    toggleOffStartBtn();
 
     //Close the form after create the project
     formContainer.removeChild(newProjectForm);
@@ -51,9 +50,9 @@ export function showNewProjectForm() {
 // Function to create Project Container
 export function createProjectContainer (projectName) {
   const projectDiv = document.createElement('div');
-  projectDiv.classList.add('project-container');
-
+  
   const projectTitle = document.createElement('h2');
+  projectTitle.classList.add('project-title');
   projectTitle.textContent = projectName;
   projectDiv.appendChild(projectTitle);
 
