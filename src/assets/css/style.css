@@ -37,5 +37,7 @@ body {
   color: white;
 }
 
-
-
+#createProjectBtn {
+  background-color: black;
+  color: wheat;
+}

@@ -15,7 +15,7 @@ export function showNewProjectForm() {
   const createProjectBtn = document.createElement('button');
   createProjectBtn.type = 'submit';
   createProjectBtn.classList.add('create-project-btn');
-  createProjectBtn.id = 'createProjectBtn'
+  createProjectBtn.id = 'createProjectBtn';
   createProjectBtn.textContent = 'Create project';
   newProjectForm.appendChild(createProjectBtn);
 
@@ -40,7 +40,8 @@ export function showNewProjectForm() {
     const project = document.getElementById('project');
     project.appendChild(projectContainer);
 
-    toggleStartBtn();
+    // Toggle off start button after create the project
+    toggleOffStartBtn();
 
     //Close the form after create the project
     formContainer.removeChild(newProjectForm);
@@ -64,13 +65,8 @@ export function createProjectContainer (projectName) {
   return projectDiv;
 }
 
-// Function to toggle the button 'Start a New Project'
-export function toggleStartBtn() {
+// Function to toggle of the button 'Start a New Project'
+export function toggleOffStartBtn() {
   const startButtonContainer = document.getElementById('start-btn');
-  if(startButtonContainer) {
-    startButtonContainer.style.display = startButtonContainer.style.display === 'none' ? 'block' : 'none';
-    // Forzar el cambio de estilo
-    startButtonContainer.style.setProperty('display', startButtonContainer.style.display, 'important');
-  }
-  
+  startButtonContainer.style.display = 'none';
 }
