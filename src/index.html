@@ -4,7 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Initial UI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <div class="container">
     <div class="sidebar">
@@ -16,7 +20,7 @@
 
       <div class="task-buttons">
         <button class="sidebar-button" id="all-tasks">
-          <span class="icon-container">
+          <span class="icon-container icons-sidebar">
             <img class="sidebar-icon" src="./assets/images/all-tasks.svg" alt="all-tasks">
           </span>
           <div class="sidebar-name">
@@ -24,7 +28,7 @@
           </div>
         </button>
         <button class="sidebar-button" id="upcoming-tasks">
-          <span class="icon-container">
+          <span class="icon-container icons-sidebar">
             <img class="sidebar-icon" src="./assets/images/upcoming.svg" alt="all-tasks">
           </span>
           <div class="sidebar-name">
@@ -32,7 +36,7 @@
           </div>
         </button>
         <button class="sidebar-button" id="completed">
-          <span class="icon-container">
+          <span class="icon-container icons-sidebar">
             <img class="sidebar-icon" src="./assets/images/completed.svg" alt="all-tasks">
           </span>
           <div class="sidebar-name">
@@ -48,7 +52,7 @@
 
       <div class="default-project-container">
         <button class="sidebar-button" id="default-project">
-          <span class="icon-container">
+          <span class="icon-container icons-sidebar">
             <img class="sidebar-icon" src="./assets/images/tag-icon.svg" alt="all-tasks">
           </span>
           <div class="sidebar-name">
@@ -60,7 +64,54 @@
 
     </div>
 
-    <div class="main-content"></div>
+    <div class="main-content">
+      <div class="content-header">
+        <div class="current-section-container">
+          <span class="icon-container main-header-icon">
+            <img id="iconCurrentSection" src="./assets/images/all-tasks.svg" alt="all-tasks">
+          </span>
+          <h1 id="titleCurrentSection">All Tasks</h1>
+        </div>
+        <div class="section-info-container">
+          <span class="icon-container main-header-icon">
+            <img class="infoIcon" src="./assets/images/info-icon.svg" alt="all-tasks">
+          </span>
+          <div class="infoText">Find all of your tasks
+            from every project.</div>
+        </div>
+      </div>
+      <div class="add-task-container">
+        <button class="add-new-task-btn">Add new task!</button>
+      </div>
+
+      <div class="tasks-container">
+        <div class="task-card high">
+          <div class="task">
+            <div class="checkbox-container">
+              <img src="./assets/images/uncheckbox.svg" alt="uncheckbox" data-id="0">
+            </div>
+            <div class="task-details">
+              <h3 class="task-title">Conquer CSS, or at least make it behave</h3>
+              <p class="task-description">Wrestle with CSS specificity and layout issues until everything looks pixel-perfect (or at least passable).</p>
+            </div>
+            <div class="task-meta">
+              <span class="high">
+                <img src="./assets/images/priority_high_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="prio-high " class="task-meta-icon">"High"
+              </span>
+              <span class="due-date">
+                <img src="./assets/images/upcoming.svg" alt="due-date" class="task-meta-icon">
+                "September 10th, 2024"
+              </span>
+              <span class="assigned-project">
+                <img src="./assets/images/tag-icon.svg" alt="hashIcon" class="task-meta-icon">
+                "Default Project"
+              </span>
+              <img src="./assets/images/settings-icon.svg" alt="settingIcon" class="task-setting-icon">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>

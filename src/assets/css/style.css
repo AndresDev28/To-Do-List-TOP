@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+
 
 :root {
   --primary-color: #f2e7c9; /* Parchment */
@@ -16,6 +15,9 @@
 .container {
   display: grid;
   grid-template-columns: 1fr 4fr;
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 /* Sidebar */
 .sidebar {
@@ -37,10 +39,10 @@
 .icon-header {
   height: 50px;
   width: 50px;
+  fill: var(--text-color1);
 }
 .title-header {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 800;
+  font-weight: bolder;
   color: var(--text-color1);
 }
 
@@ -74,7 +76,22 @@
 }
 
 .icon-container {
+  display: inline-block; /* Permite aplicar ancho, alto y border-radius */
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--text-color1);
+  padding: 8px;
+  box-sizing: border-box; /* Incluye el padding en el cálculo del ancho y alto */
+}
+.icons-sidebar {
   margin: 0 20px;
+}
+
+.icon-container img {
+  fill: var(--text-color2);
+  width: 100%;
+  height: 100%;
 }
 
 .sidebar-icon {
@@ -84,7 +101,6 @@
 
 .sidebar-name {
   color: whitesmoke;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 0.7rem;
 }
 
@@ -111,3 +127,36 @@
 .main-content {
   background-color: var(--primary-color);
 }
+
+.content-header {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.current-section-container,
+.section-info-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  margin-top: 50px;
+  background-color: var(--fourth-color);
+  border-radius: 12px;
+  
+}
+.current-section-container {
+  padding: 20px;
+}
+.section-info-container {
+  line-height: 12px;
+  padding: 20px 20px;
+}
+
+.main-header-icon {
+  width: 40px;
+  height: 40px;
+}
+
+
+
