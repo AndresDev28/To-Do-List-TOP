@@ -7,15 +7,57 @@
 </head>
 <body>
   <div class="container">
-    <div class="title">
-      <h1 class="title">TO-DO LIST</h1>
-    </div>
-    <div class="start-btn" id="start-btn" style="display: block">
-      <button id="new-project-btn">Start A New Project</button>
+    <div class="sidebar">
+
+      <div class="sidebar-header">
+        <img class="icon-header" src="./assets/images/to-do-list-icon.svg" alt="todo-icon">
+        <h2 class="title-header">TODO LIST APP</h2>
+      </div>
+
+      <div class="task-buttons">
+        <button class="sidebar-button" id="all-tasks">
+          <span class="icon-container">
+            <img class="sidebar-icon" src="./assets/images/all-tasks.svg" alt="all-tasks">
+          </span>
+          <div class="sidebar-name">
+            <h2>All tasks</h2>
+          </div>
+        </button>
+        <button class="sidebar-button" id="upcoming-tasks">
+          <span class="icon-container">
+            <img class="sidebar-icon" src="./assets/images/upcoming.svg" alt="all-tasks">
+          </span>
+          <div class="sidebar-name">
+            <h2>Upcoming Tasks</h2>
+          </div>
+        </button>
+        <button class="sidebar-button" id="completed">
+          <span class="icon-container">
+            <img class="sidebar-icon" src="./assets/images/completed.svg" alt="all-tasks">
+          </span>
+          <div class="sidebar-name">
+            <h2>Completed</h2>
+          </div>
+        </button>
+      </div>
+
+      <div class="my-project-container">
+        <h2 class="title-container">My projects</h2>
+        <img class="add-project-icon" id="addProject" src="./assets/images/add-project.svg" alt="add-project">
+      </div>
+
+      <button class="sidebar-button" id="default-project">
+        <span class="icon-container">
+          <img class="sidebar-icon" src="./assets/images/completed.svg" alt="all-tasks">
+        </span>
+        <div class="sidebar-name">
+          <h2>Default Project</h2>
+        </div>
+      </button>
+
     </div>
 
-    <div class="form-container" id="form-container"></div>
-    <div class="project-card" id="project" style="display: none;"></div>
+    <div class="main-content"></div>
   </div>
 </body>
 </html>

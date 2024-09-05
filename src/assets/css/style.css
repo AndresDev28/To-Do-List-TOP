@@ -1,99 +1,112 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
 
-body {
-  font-family: 'Popins', sans-serif;
+:root {
+  --primary-color: #f2e7c9; /* Parchment */
+  --secondary-color: #E7EFC5; /* Cream */
+  --terciary-color: #BFD7B5; /* Tea green */
+  --fourth-color: #A3C4BC; /* Ash gray */
+  --text-color1: #413C58; /* English violet */
+  --text-color2: #C5D1D3; /* Silver */
+  --high-prio-color: #0CCA4A;
+  --medium-prio-color: #FF8B47;
+  --low-prio-color: #DC042C;
 }
 
 .container {
-  background: rgb(0,139,50);
-  background: radial-gradient(circle, rgba(0,139,50,1) 0%, rgba(126,251,239,1) 84%);
-  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+/* Sidebar */
+.sidebar {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  height: 100vh;
+  background-color: var(--secondary-color);
 }
-
-.title  {
-  margin: 50px 0 20px 0;
-  font-size: 1.8em;
-  color: whitesmoke;
-  font-weight: bold;
-}
-
-#new-project-btn {
-  padding: 10px 20px;
-  border-radius: 8px;
-  border: none;
-  background-color: white;
-  color: rgb(231, 82, 2);
-  cursor: pointer;
-  transition: background-color 0.3 ease;
-  font-weight: 600;
-  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.7);
-}
-
-#new-project-btn:hover {
-  background-color: rgb(231, 82, 2);
-  color: white;
-}
-
-/* Create Project Form styles */
-.form-container {
+/* sidebar Header */
+.sidebar-header {
   display: flex;
-  justify-content: center;
+  width: 100%;
+  max-height: 75px;
+  padding: 10px;
+  justify-content: space-around;
   align-items: center;
   margin-top: 20px;
 }
-
-form {
-  background-color: #fff;
-  padding: 30px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
+.icon-header {
+  height: 50px;
+  width: 50px;
+}
+.title-header {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 800;
+  color: var(--text-color1);
 }
 
-input[type="text"] {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
-  margin-bottom: 20px;
-  font-size: 16px;
-}
+/* Tasks Buttons */
+.task-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+} 
 
-button[type="submit"], 
-.add-task-btn  {
-  background-color: #4CAF50;
-  color: white;
-  font-weight: 600;
-  padding: 12px 20px;
+.sidebar-button {
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
   border: none;
-  border-radius: 8px;
+  margin: 10px 0;
+  padding: 15px 0;
+  border-radius: 20px;
+  width: 80%;
+  background-color: var(--fourth-color);
   cursor: pointer;
-  font-size: 16px;
   transition: background-color 0.3s ease;
 }
-
-button[type="submit"]:hover,
-.add-task-btn:hover {
-  background-color: #3e8e41;
+.sidebar-button:hover {
+  background-color: #448b7a;
+}
+.sidebar-button:active {
+  border: 2px solid var(--text-color1);
 }
 
-/* Project card styles */
-.project-card {
+.icon-container {
+  margin: 0 20px;
+}
+
+.sidebar-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.sidebar-name {
+  color: whitesmoke;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.7rem;
+}
+
+/* My Projects */
+.my-project-container {
   display: flex;
-  justify-content: center;
+  margin-top: 20px;
+  justify-content: space-evenly;
   align-items: center;
-  background-color: #fff;
-  width: 100%;
-  max-width: 400px;
-  padding: 30px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-.project-title {
-  color: #3e8e41;
-  margin-bottom: 20px;
+.title-container {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--text-color1);
+}
+
+.add-project-icon {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+/* Main Content */
+.main-content {
+  background-color: var(--primary-color);
 }

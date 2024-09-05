@@ -6,3 +6,8 @@ export function createProject(projectName) {
     tasks: []
   };
 }
+
+// function to add a task to the project
+export function addTaskToProject (project, newTask) {
+  project.tasks.push(newTask);
+}
