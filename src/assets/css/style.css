@@ -45,7 +45,8 @@
 }
 
 /* Tasks Buttons */
-.task-buttons {
+.task-buttons,
+.default-project-container {
   display: flex;
   flex-direction: column;
   align-items: center;
