@@ -47,7 +47,7 @@
 
       <div class="my-project-container">
         <h2 class="title-container">My projects</h2>
-        <img class="add-project-icon" id="addProject" src="./assets/images/add-project.svg" alt="add-project">
+        <img class="add-project-icon" id="addProjectBtn" src="./assets/images/add-project.svg" alt="add-project">
       </div>
 
       <div class="default-project-container">
@@ -88,30 +88,91 @@
         <div class="task-card high">
           <div class="task">
             <div class="checkbox-container">
-              <img src="./assets/images/uncheckbox.svg" alt="uncheckbox" data-id="0">
+              <img class="checkbox" src="./assets/images/uncheckbox.svg" alt="uncheckbox" data-id="0">
             </div>
             <div class="task-details">
               <h3 class="task-title">Conquer CSS, or at least make it behave</h3>
-              <p class="task-description">Wrestle with CSS specificity and layout issues until everything looks pixel-perfect (or at least passable).</p>
+              <p class="task-description">Wrestle with CSS specificity and layout issues until everything looks pixel-perfect.</p>
             </div>
             <div class="task-meta">
-              <span class="high">
-                <img src="./assets/images/priority_high_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="prio-high " class="task-meta-icon">"High"
+              <span class="priority">
+                <img src="./assets/images/priority_high_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="prio-high " class="task-meta-icon">
+                <p>"High"</p> 
               </span>
               <span class="due-date">
                 <img src="./assets/images/upcoming.svg" alt="due-date" class="task-meta-icon">
-                "September 10th, 2024"
+                <p>"September 10th, 2024"</p> 
               </span>
               <span class="assigned-project">
                 <img src="./assets/images/tag-icon.svg" alt="hashIcon" class="task-meta-icon">
-                "Default Project"
+                <p>"Default Project"</p>
+              </span>
+              <img src="./assets/images/settings-icon.svg" alt="settingIcon" class="task-setting-icon">
+            </div>
+          </div>
+        </div>
+        <div class="task-card medium">
+          <div class="task task-completed">
+            <div class="checkbox-container">
+              <img class="checkbox" src="./assets/images/checkbox.svg" alt="checkbox" data-id="1">
+            </div>
+            <div class="task-details">
+              <h3 class="task-title task-title-complete">Debug the gremlins</h3>
+              <p class="task-description task-description-complete">Exterminate those pesky bugs that are causing unexpected behavior in the app.</p>
+            </div>
+            <div class="task-meta">
+              <span class="priority">
+                <img src="./assets/images/priority_high_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="prio-high " class="task-meta-icon">
+                <p>"Medium"</p> 
+              </span>
+              <span class="due-date">
+                <img src="./assets/images/upcoming.svg" alt="due-date" class="task-meta-icon">
+                <p>"September 30th, 2024"</p> 
+              </span>
+              <span class="assigned-project">
+                <img src="./assets/images/tag-icon.svg" alt="hashIcon" class="task-meta-icon">
+                <p>"Default Project"</p>
               </span>
               <img src="./assets/images/settings-icon.svg" alt="settingIcon" class="task-setting-icon">
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Create project popUp -->
+      <div class="modal-container" id="createProjectModal" style="display: none;">
+        <div class="modal-header">
+          <div class="modal-heading">
+            <span class="icon-container">
+              <img src="./assets/images/create-project.svg" alt="create-project">
+            </span>
+            <h1 class="title-header">Create a project</h1>
+          </div>
+          <div class="info-heading">
+            <span class="icon-container">
+              <img src="./assets/images/info-icon.svg" alt="create-project-info">
+            </span>
+            <p class="info-header">Group your task for specific project</p>
+          </div>
+          <div class="modal-close-btn">
+            <button class="close-btn-icon" id="closeBtnCreateProject">
+              <img src="./assets/images/close-btn-icon.svg" alt="Close">
+            </button>
+          </div>        
+        </div>
+        
+        <div class="name-project-container">
+          <h2 class="name-project">Name of project</h2>
+        </div>
+        <div class="create-edit-project-name">
+          <input type="text" placeholder="Name of project" class="project-input" id="projectNameInput">
+          <button class="create-project-btn" type="submit" id="createProjectBtn">Create</button>
+        </div>
+        
+      </div>
     </div>
   </div>
+
+  <div id="overlay" style="display: none;"></div>
 </body>
 </html>
