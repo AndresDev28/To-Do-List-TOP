@@ -50,8 +50,8 @@
         <img class="add-project-icon" id="addProjectBtn" src="./assets/images/add-project.svg" alt="add-project">
       </div>
 
-      <div class="default-project-container">
-        <button class="sidebar-button" id="default-project">
+      <div class="projects-container">
+        <button class="sidebar-button project-button" id="default-project">
           <span class="icon-container icons-sidebar">
             <img class="sidebar-icon" src="./assets/images/tag-icon.svg" alt="all-tasks">
           </span>
@@ -61,7 +61,6 @@
         </button>
       </div>
         
-
     </div>
 
     <div class="main-content">
@@ -81,11 +80,11 @@
         </div>
       </div>
       <div class="add-task-container">
-        <button class="add-new-task-btn">Add new task!</button>
+        <button class="add-new-task-btn" id="addNewTaskBtn">Add new task!</button>
       </div>
 
-      <div class="tasks-container">
-        <div class="task-card high">
+      <div class="tasks-container" id="taskContainer">
+        <div class="task-card high" id="upcomingTasksContainer">
           <div class="task">
             <div class="checkbox-container">
               <img class="checkbox" src="./assets/images/uncheckbox.svg" alt="uncheckbox" data-id="0">
@@ -111,7 +110,7 @@
             </div>
           </div>
         </div>
-        <div class="task-card medium">
+        <div class="task-card medium" id="completedTasksContainer">
           <div class="task task-completed">
             <div class="checkbox-container">
               <img class="checkbox" src="./assets/images/checkbox.svg" alt="checkbox" data-id="1">
@@ -139,7 +138,7 @@
         </div>
       </div>
 
-      <!-- Create project popUp -->
+      <!-- Create project modal -->
       <div class="modal-container" id="createProjectModal" style="display: none;">
         <div class="modal-header">
           <div class="modal-heading">
@@ -167,8 +166,61 @@
         <div class="create-edit-project-name">
           <input type="text" placeholder="Name of project" class="project-input" id="projectNameInput">
           <button class="create-project-btn" type="submit" id="createProjectBtn">Create</button>
+        </div>       
+      </div>
+    </div>
+  </div>
+
+  <!-- Create task modal -->
+  <div class="modal-container" id="addNewTaskModal">
+    <div class="modal-header">
+      <div class="modal-heading modal-task-heading">
+        <span class="icon-container">
+          <img src="./assets/images/completed.svg" alt="">
+        </span>
+        <h1 class="title-header">Add new task</h1>
+      </div>
+      <div class="dropDown-container">
+        <p class="dropdown-header">Assigned to</p>
+        <select name="dropdown-project" id="dropdownProject">
+          <option value="disabled">Select a Project</option>
+          <option>Default Project</option>
+        </select>
+      </div>
+      <div class="modal-close-btn">
+        <button class="close-btn-icon" id="closeBtnAddNewTask">
+          <img src="./assets/images/close-btn-icon.svg" alt="Close">
+        </button>
+      </div>
+    </div>
+    <div class="modal-input-field-container">
+      <div class="modal-task-name-container">
+        <h1 class="modal-fieldname">Task Name</h1>
+        <div class="create-edit-project-name ">
+          <input type="text" placeholder="Task name" class="project-input" id="taskName">
         </div>
-        
+      </div>
+      <div class="modal-task-descrip-container"></div>
+        <h1 class="modal-fieldname">Description</h1>
+        <div class="create-edit-project-name ">
+          <input type="text" placeholder="Description" class="project-input" id="taskDesc">
+        </div>
+        <div class="modal-priority-container">
+          <h1 class="modal-fieldname">Priority</h1>
+          <div class="create-edit-projec-name" id="modalPrioIconContainer">
+            <div class="priority-options">
+              <label class="priotiy-option">
+                <input type="radio" name="priority" value="High">"High"
+              </label>
+              <label class="priotiy-option">
+                <input type="radio" name="priority" value="Medium">"Medium"
+              </label>
+              <label class="priotiy-option">
+                <input type="radio" name="priority" value="Low">"Low"
+              </label>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

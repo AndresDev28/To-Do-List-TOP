@@ -1,5 +1,7 @@
-// function to create a new project
+// Array para almacenar los proyectos
+export let projectsArray = [];
 
+// function to create a new project
 export function createProject(projectName) {
   return {
     name: projectName,
