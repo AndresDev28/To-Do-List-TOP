@@ -10,10 +10,7 @@ import {
   hideTasks } from './modules/dom';
 import { saveProjects } from './modules/storage';
 import { loadProjects } from './modules/storage';
-
-
-
-
+import { generateCalendar } from './modules/todo';
 
 
 // Cargar projectos al inicio de la aplicacion
@@ -34,6 +31,8 @@ const allTasksBtn = document.getElementById('all-tasks');
 const defaultProjectBtn = document.getElementById('default-project');
 const upcomingTaksBtn = document.getElementById('upcoming-tasks');
 const completedTaksBtn = document.getElementById('completed');
+const prevMonthBtn = document.getElementById('prevMonth');
+const nextMonthBtn = document.getElementById('nextMonth');
 
 /* Evento para mostrar el modal de crear Proyecto */
 addProjectBtn.addEventListener('click', () => {
@@ -109,3 +108,28 @@ defaultProjectBtn.addEventListener('click', () => {
   updateCurrentSelectionTitle('Default Project');
 })
 
+// Generar el calendario inicial del modal Add new task
+
+let currentYear = new Date().getFullYear();
+let currentMonth = new Date().getMonth();
+generateCalendar(currentYear, currentMonth);
+
+// Cambiar el calendario con los botones prevMonth y nextMonth
+
+prevMonthBtn.addEventListener('click', () => {
+  currentMonth--;
+  if (currentMonth < 0) {
+    currentMonth = 11;
+    currentYear--;
+  }
+  generateCalendar(currentYear, currentMonth);
+});
+
+nextMonthBtn.addEventListener('click', () => {
+  currentMonth++;
+  if (currentMonth > 11) {
+    currentMonth = 0;
+    currentYear++;
+  }
+  generateCalendar(currentYear, currentMonth);
+});
